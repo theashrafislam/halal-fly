@@ -28,7 +28,7 @@ export default function Home() {
       <Review />
 
       {/* video  */}
-      {/* <Video /> */}
+      <Video />
 
       {/* total  */}
       {/* <Total /> */}
