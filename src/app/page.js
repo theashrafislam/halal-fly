@@ -16,10 +16,10 @@ export default function Home() {
       <HeroSection />
 
       {/* card section  */}
-      {/* <CardSection /> */}
+      <CardSection />
 
       {/* FindTraval */}
-      {/* <FindTraval /> */}
+      <FindTraval />
 
       {/* Destinations */}
       {/* <Destinations /> */}
