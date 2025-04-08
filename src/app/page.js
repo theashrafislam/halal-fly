@@ -25,7 +25,7 @@ export default function Home() {
       <Destinations />
 
       {/* review  */}
-      {/* <Review /> */}
+      <Review />
 
       {/* video  */}
       {/* <Video /> */}
