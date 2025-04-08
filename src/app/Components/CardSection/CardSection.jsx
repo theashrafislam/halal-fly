@@ -5,12 +5,12 @@ const CardSection = () => {
     return (
         <section className='bg-[#F5F5F5] text-[#2D3E50] py-[100px]'>
             <div className='max-w-7xl mx-auto'>
-                <div className='pb-[56px]'>
+                <div className='pb-[56px] mx-3 lg:mx-0'>
                     <h4 className='text-5xl font-bold mb-3'>Discover Weekly</h4>
                     <p className='text-base'>An enim nullam tempor sapien gravida donec enim ipsum</p>
                 </div>
                 {/* cards  */}
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mx-3 lg:mx-0'>
                     {[1, 2, 3, 4].map((card, index) => (
                         <div key={index}>
                             <Card />

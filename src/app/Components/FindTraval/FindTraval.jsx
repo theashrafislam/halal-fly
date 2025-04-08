@@ -4,12 +4,14 @@ const FindTraval = () => {
     return (
         <div className='bg-[#F2FBFA] text-[#2D3E50]'>
             <div className='py-[120px] max-w-7xl mx-auto'>
-                <h4 className='text-5xl font-bold mb-3 text-center'>Find Travel Perfection</h4>
-                <p className='text-base text-center'>An enim nullam tempor gravida donec enim  congue magna at pretium purus pretium ligula <br /> rutrum luctus risusd diam eget risus varius blandit sit amet non magna.</p>
+                <div className=' mx-3 lg:mx-0'>
+                    <h4 className='text-5xl font-bold mb-3 text-center'>Find Travel Perfection</h4>
+                    <p className='text-base text-center'>An enim nullam tempor gravida donec enim  congue magna at pretium purus pretium ligula <br /> rutrum luctus risusd diam eget risus varius blandit sit amet non magna.</p>
+                </div>
 
                 {/* cards  */}
-                <div className='grid pt-[55px] grid-cols-1 md:grid-cols-3 gap-6'>
-                    <div className='w-[416px]'>
+                <div className='grid pt-[55px] grid-cols-1 md:grid-cols-3 gap-6 mx-3 lg:mx-0'>
+                    <div>
 
                         <div className='bg-white rounded-xl px-[55px] pt-[67px] pb-[97px]'>
                             <div className='flex items-center justify-center'>
@@ -33,7 +35,7 @@ const FindTraval = () => {
                         </div>
 
                     </div>
-                    <div className='w-[416px]'>
+                    <div>
 
                         <div className='bg-white rounded-xl px-[55px] pt-[67px] pb-[97px]'>
                             <div className='flex items-center justify-center'>
@@ -60,7 +62,7 @@ const FindTraval = () => {
                         </div>
 
                     </div>
-                    <div className='w-[416px]'>
+                    <div>
 
                         <div className='bg-white rounded-xl px-[55px] pt-[67px] pb-[97px]'>
                             <div className='flex items-center justify-center'>

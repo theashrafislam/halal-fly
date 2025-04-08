@@ -6,7 +6,7 @@ import { IoStar } from 'react-icons/io5';
 
 const Card = () => {
     return (
-        <div className='rounded-md text-[#2D3E50] bg-white w-[306px]'>
+        <div className='rounded-md text-[#2D3E50] bg-white'>
             <div className='relative'>
                 <Image src={'/hero-section.jpg'} className='rounded-t-md' alt='Hello' width={700} height={400} />
                 <div className='bg-white rounded-full p-2 absolute top-2 right-2'><CiHeart className='text-3xl text-[#2D3E50]' /></div>

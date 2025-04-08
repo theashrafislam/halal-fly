@@ -7,15 +7,15 @@ const Blog = () => {
     return (
         <div className='bg-[#F5F5F5] text-[#2D3E50] py-[120px]'>
             <div className='max-w-7xl mx-auto'>
-                <div className='pb-[56px] text-center'>
+                <div className='pb-[56px] text-center mx-3 lg:mx-0'>
                     <h4 className='text-5xl font-bold mb-3'>Travel Tips and Advice</h4>
                     <p className='text-base'>An enim nullam tempor gravida donec enim  congue magna at pretium purus pretium ligula <br /> rutrum luctus risusd diam eget risus varius blandit sit amet non magna.</p>
                 </div>
 
                 {/* cards  */}
 
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-                    <div className='rounded-md text-[#2D3E50] bg-white w-[416px]'>
+                <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mx-3 lg:mx-0'>
+                    <div className='rounded-md text-[#2D3E50] bg-white'>
                         <div>
                             <Image src={'/hero-section.jpg'} className='rounded-t-md' alt='Hello' width={700} height={400} />
                         </div>
@@ -35,7 +35,7 @@ const Blog = () => {
                             <p className='pt-4 font-semibold text-base cursor-pointer'>Read More</p>
                         </div>
                     </div>
-                    <div className='rounded-md text-[#2D3E50] bg-white w-[416px]'>
+                    <div className='rounded-md text-[#2D3E50] bg-white'>
                         <div>
                             <Image src={'/hero-section.jpg'} className='rounded-t-md' alt='Hello' width={700} height={400} />
                         </div>
@@ -55,7 +55,7 @@ const Blog = () => {
                             <p className='pt-4 font-semibold text-base cursor-pointer'>Read More</p>
                         </div>
                     </div>
-                    <div className='rounded-md text-[#2D3E50] bg-white w-[416px]'>
+                    <div className='rounded-md text-[#2D3E50] bg-white'>
                         <div>
                             <Image src={'/hero-section.jpg'} className='rounded-t-md' alt='Hello' width={700} height={400} />
                         </div>
