@@ -19,15 +19,13 @@ const HeroSection = () => {
     ];
 
     return (
-        // <div className="relative lg:min-h-[700px] w-full text-[#F5F5F5] bg-cover bg-no-repeat bg-center min-h-screen"
-        //     style={{ backgroundImage: 'url(/hero-section.jpg)' }}>
-        <div className="relative lg:min-h-[700px] w-full text-[#F5F5F5] bg-cover bg-no-repeat bg-center min-h-screen bg-[url('/hero-section.jpg')]">
+        <div className="relative lg:min-h-[700px] w-full text-[#F5F5F5] bg-cover bg-no-repeat bg-center min-h-[100dvh] bg-[url('/hero-section.jpg')]">
 
             {/* Overlay */}
             <div className="absolute inset-0 bg-black/30"></div>
 
             {/* Text + Content */}
-            <div className="absolute inset-0 max-w-7xl mx-auto px-4 flex flex-col justify-center">
+            <div className="pt-20 max-w-7xl mx-auto px-4 flex flex-col justify-center z-10 relative">
                 <div className="max-w-5xl mx-auto mb-6 sm:mb-8">
                     <h1 className="text-2xl sm:text-3xl mb-2 sm:mb-4">HALALFLY</h1>
                     <h1 className="text-4xl sm:text-6xl font-bold leading-tight mb-4 sm:mb-6">
