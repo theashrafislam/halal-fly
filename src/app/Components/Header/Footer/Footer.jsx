@@ -8,7 +8,7 @@ const Footer = () => {
         <section className='bg-[#F5F5F5]'>
             <div className='max-w-7xl mx-auto text-[#2D3E50]'>
                 {/* 1st part  */}
-                <div className='flex items-center justify-between pb-[82px] pt-[125px]'>
+                <div className='flex justify-between pb-[82px] pt-[125px]'>
                     <div className='flex flex-col gap-8'>
                         <div>
                             <p>There are many variations of passages of <br /> Lorem the Ipsum available but it is the <br /> majority of suffered that a alteration in <br /> that some dummy text.</p>
