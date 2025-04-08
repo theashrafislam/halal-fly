@@ -8,7 +8,7 @@ const Footer = () => {
         <section className='bg-[#F5F5F5]'>
             <div className='max-w-7xl mx-auto text-[#2D3E50]'>
                 {/* 1st part  */}
-                <div className='flex flex-col md:flex-row justify-between pb-[82px] pt-[125px] mx-3 md:mx-0'>
+                <div className='flex flex-col gap-5 lg:gap-0 md:flex-row justify-between pb-[82px] pt-[125px] mx-3 lg:mx-0'>
                     <div className='flex flex-col gap-8'>
                         <div>
                             <p>There are many variations of passages of <br className='hidden md:block'/> Lorem the Ipsum available but it is the <br className='hidden md:block'/> majority of suffered that a alteration in <br className='hidden md:block'/> that some dummy text.</p>
@@ -52,8 +52,8 @@ const Footer = () => {
                 </div>
 
                 {/* 2nd part */}
-                <div className='mx-3 md:mx-0'>
-                    <p className='text-sm text-center md:text-start py-7'>© 2025 Ivan, Halal Fly All Rights Reserved.</p>
+                <div className='mx-3 lg:mx-0'>
+                    <p className='text-sm text-center lg:text-start py-7'>© 2025 Ivan, Halal Fly All Rights Reserved.</p>
                 </div>
             </div>
         </section>

@@ -13,31 +13,31 @@ export default function Home() {
   return (
     <div>
       {/* hero section  */}
-      <HeroSection />
+      {/* <HeroSection /> */}
 
       {/* card section  */}
-      <CardSection />
+      {/* <CardSection /> */}
 
       {/* FindTraval */}
-      <FindTraval />
+      {/* <FindTraval /> */}
 
       {/* Destinations */}
-      <Destinations />
+      {/* <Destinations /> */}
 
       {/* review  */}
-      <Review />
+      {/* <Review /> */}
 
       {/* video  */}
-      <Video />
+      {/* <Video /> */}
 
       {/* total  */}
-      <Total />
+      {/* <Total /> */}
 
       {/* Blogs  */}
-      <Blog />
+      {/* <Blog /> */}
 
       {/* subscribe  */}
-      <Subscribe />
+      {/* <Subscribe /> */}
     </div>
   );
 }
