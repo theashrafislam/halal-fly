@@ -22,7 +22,7 @@ export default function Home() {
       <FindTraval />
 
       {/* Destinations */}
-      {/* <Destinations /> */}
+      <Destinations />
 
       {/* review  */}
       {/* <Review /> */}
