@@ -31,7 +31,7 @@ export default function Home() {
       <Video />
 
       {/* total  */}
-      {/* <Total /> */}
+      <Total />
 
       {/* Blogs  */}
       {/* <Blog /> */}

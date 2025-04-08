@@ -4,7 +4,7 @@ const Total = () => {
     return (
         <div className='bg-[#1A5F7A] text-[#F5F5F5]'>
             <div className='max-w-7xl mx-auto py-[70px] '>
-                <div className='grid grid-cols-1 md:grid-cols-3 mx-3 lg:mx-0'>
+                <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mx-3 lg:mx-0'>
                     {/* card  */}
                     <div className='flex items-center gap-5'>
                         <svg width="53" height="60" viewBox="0 0 53 60" fill="none" xmlns="http://www.w3.org/2000/svg">
