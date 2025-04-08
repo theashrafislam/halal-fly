@@ -34,10 +34,10 @@ export default function Home() {
       <Total />
 
       {/* Blogs  */}
-      {/* <Blog /> */}
+      <Blog />
 
       {/* subscribe  */}
-      {/* <Subscribe /> */}
+      <Subscribe />
     </div>
   );
 }
