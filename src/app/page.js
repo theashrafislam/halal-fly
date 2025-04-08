@@ -7,6 +7,7 @@ import Review from "./Components/Review/Review";
 import Video from "./Components/Video/Video";
 import Total from "./Components/Total/Total";
 import Blog from "./Components/Blog/Blog";
+import Subscribe from "./Components/SubScribe/Subscribe";
 
 export default function Home() {
   return (
@@ -34,6 +35,9 @@ export default function Home() {
 
       {/* Blogs  */}
       <Blog />
+
+      {/* subscribe  */}
+      <Subscribe />
     </div>
   );
 }
