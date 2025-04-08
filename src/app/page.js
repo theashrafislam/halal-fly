@@ -1,9 +1,11 @@
 import Image from "next/image";
+import HeroSection from "./Components/HeroSection/HeroSection";
 
 export default function Home() {
   return (
     <div>
-      hello word
+      {/* hero section  */}
+      <HeroSection />
     </div>
   );
 }

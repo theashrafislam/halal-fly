@@ -16,7 +16,7 @@ const Header = () => {
 
     return (
         <nav className='bg-[#F5F5F5] shadow-md'>
-            <div className='max-w-7xl mx-auto px-4 text-[#2D3E50] flex items-center justify-between py-4'>
+            <div className='max-w-7xl mx-auto px-4 mb-[250px] md:mb-[150px] lg:mb-0 text-[#2D3E50] flex items-center justify-between py-4'>
                 {/* Logo */}
                 <div className='text-xl font-bold'>Logo</div>
 
