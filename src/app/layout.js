@@ -1,5 +1,7 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import Header from "./Components/Header/Header";
+import Footer from "./Components/Header/Footer/Footer";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -16,16 +18,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} antialiased`}
+        className={`${poppins.className} antialiased flex flex-col min-h-screen`}
       >
         {/* header section  */}
-        <header></header>
+        <header><Header /></header>
 
         {/* main section  */}
-        <main>{children}</main>\
+        <main className="flex-grow">{children}</main>
 
         {/* footer section  */}
-        <footer></footer>
+        <footer><Footer /></footer>
       </body>
     </html>
   );
