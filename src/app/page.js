@@ -6,6 +6,7 @@ import Destinations from "./Components/Destinations/Destinations";
 import Review from "./Components/Review/Review";
 import Video from "./Components/Video/Video";
 import Total from "./Components/Total/Total";
+import Blog from "./Components/Blog/Blog";
 
 export default function Home() {
   return (
@@ -30,6 +31,9 @@ export default function Home() {
 
       {/* total  */}
       <Total />
+
+      {/* Blogs  */}
+      <Blog />
     </div>
   );
 }
