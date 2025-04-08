@@ -4,6 +4,8 @@ import CardSection from "./Components/CardSection/CardSection";
 import FindTraval from "./Components/FindTraval/FindTraval";
 import Destinations from "./Components/Destinations/Destinations";
 import Review from "./Components/Review/Review";
+import Video from "./Components/Video/Video";
+import Total from "./Components/Total/Total";
 
 export default function Home() {
   return (
@@ -22,6 +24,12 @@ export default function Home() {
 
       {/* review  */}
       <Review />
+
+      {/* video  */}
+      <Video />
+
+      {/* total  */}
+      <Total />
     </div>
   );
 }
