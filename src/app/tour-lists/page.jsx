@@ -9,6 +9,7 @@ import { LuChevronRight } from 'react-icons/lu';
 import { MdMeetingRoom } from 'react-icons/md';
 import Card from '../Components/CardSection/Card';
 import Pagination from '../Components/Pagination/Pagination';
+import Subscribe from '../Components/SubScribe/Subscribe';
 
 const TourLists = () => {
 
@@ -139,6 +140,10 @@ const TourLists = () => {
                 <div className='py-10'>
                     <Pagination />
                 </div>
+            </div>
+            {/* subscribe  */}
+            <div>
+                <Subscribe />
             </div>
 
         </div>
