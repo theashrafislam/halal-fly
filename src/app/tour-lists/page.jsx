@@ -7,6 +7,8 @@ import { GiPrayer } from 'react-icons/gi';
 import { IoLocationSharp } from 'react-icons/io5';
 import { LuChevronRight } from 'react-icons/lu';
 import { MdMeetingRoom } from 'react-icons/md';
+import Card from '../Components/CardSection/Card';
+import Pagination from '../Components/Pagination/Pagination';
 
 const TourLists = () => {
 
@@ -23,16 +25,17 @@ const TourLists = () => {
     return (
         <div className='text-[#F5F5F5]'>
             <div className='bg-[#2D3E50] text-[#F5F5F5]'>
+
                 <div className='max-w-7xl mx-auto relative'>
 
                     {/* header  */}
-                    <div className='flex items-center justify-center flex-col py-[94px]'>
-                        <h2 className='font-bold text-6xl mb-2'>Tours List</h2>
+                    <div className='flex items-center justify-center flex-col py-10 md:py-[94px]'>
+                        <h2 className='font-bold text-3xl md:text-6xl mb-2'>Tours List</h2>
                         <p className='text-base font-bold'>Home <LuChevronRight className='inline text-2xl' /> Tours List Services <LuChevronRight className='inline text-2xl' /></p>
                     </div>
 
                     {/* tabs section  */}
-                    <div className='absolute left-1/2 -translate-x-1/2 -bottom-32 w-full'>
+                    <div className='md:absolute md:left-1/2 md:-translate-x-1/2 md:-bottom-32 w-full px-3'>
 
                         {/* Tabs */}
                         <div className="max-w-6xl mx-auto">
@@ -41,7 +44,7 @@ const TourLists = () => {
                                     <button
                                         key={tab.name}
                                         onClick={() => setActiveTab(tab.name)}
-                                        className={`flex items-center gap-2 px-4 py-2 rounded-full border transition text-sm sm:text-base
+                                        className={`flex items-center gap-2 px-2 md:px-4 py-2 rounded-full border transition text-sm sm:text-base
                                         ${activeTab === tab.name
                                                 ? "bg-yellow-400 text-black font-semibold"
                                                 : "bg-[#F5F5F5] text-[#2D3E50] hover:bg-yellow-200"
@@ -120,11 +123,24 @@ const TourLists = () => {
                         </div>
                     </div>
                 </div>
+
             </div>
             {/* page contect  */}
-            <div className='pt-32 bg-[#F5F5F5] text-[#2D3E50]'>
-                            <h1>hello</h1>
+            <div className='pt-44 bg-[#F5F5F5] text-[#2D3E50] px-3 lg:px-0'>
+                <div className='max-w-7xl mx-auto'>
+                    {/* card section  */}
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((card, index) => (
+                            <Card />
+                        ))}
+                    </div>
+                </div>
+                {/* Pagination  */}
+                <div className='py-10'>
+                    <Pagination />
+                </div>
             </div>
+
         </div>
     );
 };
