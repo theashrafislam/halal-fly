@@ -108,7 +108,7 @@ const HeroSection = () => {
 
                             {/* Search Button */}
                             <div className='flex justify-end w-full'>
-                                <button className="bg-[#F8CB2E] hover:bg-yellow-400 transition-all duration-300 flex items-center justify-center gap-1 text-[#2D3E50] px-6 py-3 rounded-md font-semibold w-full md:w-auto">
+                                <button className="bg-[#F8CB2E] transition-all duration-300 flex items-center justify-center gap-1 text-[#2D3E50] px-6 py-3 rounded-md font-semibold w-full md:w-auto">
                                     <CiSearch className='text-2xl' />
                                     <span>Search</span>
                                 </button>

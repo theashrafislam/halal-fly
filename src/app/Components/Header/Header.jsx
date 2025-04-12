@@ -32,7 +32,8 @@ const Header = () => {
                 {/* Desktop Buttons */}
                 <div className='flex items-center gap-4'>
                     <button className='bg-white px-6 py-2 font-semibold rounded-lg'>Login</button>
-                    <button className='bg-[#F8CB2E] px-6 py-2 font-semibold rounded-lg'>Sign Up</button>
+                    <button className="btn-primary">Sign Up</button>
+                    {/* <button className='bg-[#F8CB2E] px-6 py-2 font-semibold rounded-lg'>Sign Up</button> */}
                     <button className='bg-white px-6 py-2 font-semibold rounded-lg'>B2B</button>
                 </div>
 

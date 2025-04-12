@@ -18,7 +18,7 @@ const CardSection = () => {
                     ))}
                 </div>
                 <div className='pt-[60px] flex items-center justify-center'>
-                    <button className='px-5 py-2 font-semibold text-base bg-[#F8CB2E] text-[#2D3E50] rounded-md'>View All</button>
+                    <button className='btn-primary'>View All</button>
                 </div>
             </div>
         </section>

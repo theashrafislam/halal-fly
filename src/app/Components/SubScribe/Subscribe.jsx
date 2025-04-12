@@ -12,7 +12,7 @@ const Subscribe = () => {
                         placeholder="Enter your email"
                         className="p-3 rounded-md w-full md:w-80 bg-[#F5F5F5] text-[#2D3E50]"
                     />
-                    <button className='px-5 py-2 font-semibold text-base bg-[#F8CB2E] text-[#2D3E50] rounded-md'>Subscribe</button>
+                    <button className='btn-primary text-'>Subscribe</button>
                 </div>
             </div>
         </div>

@@ -33,7 +33,7 @@ const Card = () => {
                         <p className='text-xl font-bold'>$139.99</p>
                         <del className='text-base text-[#999]'>$190.00</del>
                     </div>
-                    <button className='px-5 py-2 font-semibold text-base bg-[#F8CB2E] text-[#2D3E50] rounded-md'>Explore</button>
+                    <button className='btn-primary'>Explore</button>
                 </div>
             </div>
         </div>

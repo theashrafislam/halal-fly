@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+:root {
+    --color-primary: #F8CB2E;
+    --text-primary: #2D3E50;
+}
+
+/* You can also create a reusable button class */
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--text-primary);
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+}

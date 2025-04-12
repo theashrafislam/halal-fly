@@ -132,7 +132,9 @@ const TourLists = () => {
                     {/* card section  */}
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
                         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((card, index) => (
-                            <Card />
+                            <div key={index}>
+                                <Card />
+                            </div>
                         ))}
                     </div>
                 </div>
