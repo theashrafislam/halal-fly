@@ -16,17 +16,17 @@ const Header = () => {
 
     return (
         <nav className='bg-[#F5F5F5] shadow-md'>
-            <div className='hidden max-w-7xl mx-auto text-[#2D3E50] lg:flex items-center justify-between py-4'>
+            <div className='hidden max-w-7xl mx-auto lg:flex items-center justify-between py-4'>
                 {/* Logo */}
                 <div className='text-xl font-bold'>Logo</div>
 
                 {/* Desktop Menu */}
                 <ul className='flex items-center gap-[46px]'>
-                    <li className='font-semibold cursor-pointer'>Tours</li>
-                    <li className='font-semibold cursor-pointer'>Destination</li>
-                    <li className='font-semibold cursor-pointer'>Blog</li>
-                    <li className='font-semibold cursor-pointer'>Page</li>
-                    <li className='font-semibold cursor-pointer'>Contact</li>
+                    <li className='font-semibold cursor-pointer hover:text-[#B82525]'>Tours</li>
+                    <li className='font-semibold cursor-pointer hover:text-[#B82525]'>Destination</li>
+                    <li className='font-semibold cursor-pointer hover:text-[#B82525]'>Blog</li>
+                    <li className='font-semibold cursor-pointer hover:text-[#B82525]'>Page</li>
+                    <li className='font-semibold cursor-pointer hover:text-[#B82525]'>Contact</li>
                 </ul>
 
                 {/* Desktop Buttons */}

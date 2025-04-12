@@ -16,7 +16,7 @@ const Pagination = () => {
       </button>
       
       {/* Page 2 - Active */}
-      <button className="w-10 h-10 flex items-center justify-center rounded-md bg-[#F8CB2E] text-[#2D3E50] border border-[#F8CB2E]">
+      <button className="w-10 h-10 flex items-center justify-center rounded-md bg-[#A51CBA] text-[#FFFFFF] border border-[#A51CBA]">
         2
       </button>
       
