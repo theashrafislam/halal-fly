@@ -5,11 +5,12 @@ import { CiCalendarDate, CiSearch } from 'react-icons/ci';
 import { FaHotel, FaPlane, FaShip, FaUser, FaUsers } from 'react-icons/fa';
 import { GiPrayer } from 'react-icons/gi';
 import { IoLocationSharp } from 'react-icons/io5';
-import { LuChevronRight } from 'react-icons/lu';
+import { LuChevronRight, LuChevronsUpDown } from 'react-icons/lu';
 import { MdMeetingRoom } from 'react-icons/md';
 import Card from '../Components/CardSection/Card';
 import Pagination from '../Components/Pagination/Pagination';
 import Subscribe from '../Components/SubScribe/Subscribe';
+import { LiaThListSolid, LiaThSolid } from "react-icons/lia";
 
 const TourLists = () => {
 
@@ -126,8 +127,23 @@ const TourLists = () => {
                 </div>
 
             </div>
+
             {/* page contect  */}
             <div className='pt-44 bg-[#F5F5F5] text-[#2D3E50] px-3 lg:px-0'>
+
+                {/* sort  header  */}
+                <div className='max-w-7xl mx-auto mb-20 flex items-center justify-between border-b-2 border-[#E6E6E6]'>
+                    <div className='flex items-center gap-2'>
+                        <h5 className='text-[32px] font-bold'>10 Tours found</h5>
+                        <p className='text-sm text-[#008DD0]'>Clear filter</p>
+                    </div>
+                    <div className='flex items-center gap-6'>
+                        <div className='flex items-center gap-2'><span className='text-base font-bold'>Sort by</span><LuChevronsUpDown className='text-2xl'/></div>
+                        <div className='flex items-center gap-2'><LiaThListSolid className='text-3xl'/><LiaThSolid className='text-3xl'/></div>
+                    </div>
+                </div>
+
+                {/* cards  */}
                 <div className='max-w-7xl mx-auto'>
                     {/* card section  */}
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
@@ -138,10 +154,12 @@ const TourLists = () => {
                         ))}
                     </div>
                 </div>
+
                 {/* Pagination  */}
                 <div className='py-10'>
                     <Pagination />
                 </div>
+
             </div>
             {/* subscribe  */}
             <div>
