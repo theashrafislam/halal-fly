@@ -132,7 +132,7 @@ const TourLists = () => {
             <div className='pt-44 bg-[#F5F5F5] text-[#2D3E50] px-3 lg:px-0'>
 
                 {/* sort  header  */}
-                <div className='max-w-7xl mx-auto mb-20 flex items-center justify-between border-b-2 border-[#E6E6E6]'>
+                <div className='max-w-7xl mx-auto mb-20 flex flex-col lg:flex-row items-center justify-between border-b-2 border-[#E6E6E6]'>
                     <div className='flex items-center gap-2'>
                         <h5 className='text-[32px] font-bold'>10 Tours found</h5>
                         <p className='text-sm text-[#008DD0]'>Clear filter</p>
