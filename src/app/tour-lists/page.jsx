@@ -156,8 +156,9 @@ const TourLists = () => {
 
                 {/* main contant  */}
                 <div className='max-w-7xl mx-auto flex gap-12 pb-20'>
-
-                    <div className='w-[60%] h-auto p-4 border-2 rounded-xl border-[#E6E6E6]'>
+                            
+                    {/* sidebar content  */}
+                    <div className='w-[60%] h-auto p-4 self-start border-2 rounded-xl border-[#E6E6E6]'>
                         {/* search tour  */}
                         <div>
 
