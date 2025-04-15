@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { CiCalendarDate, CiSearch } from 'react-icons/ci';
-import { FaHotel, FaPlane, FaShip, FaUser, FaUsers } from 'react-icons/fa';
+import { FaHotel, FaPlane, FaShip, FaStar, FaUser, FaUsers } from 'react-icons/fa';
 import { GiPrayer } from 'react-icons/gi';
 import { IoLocationSharp } from 'react-icons/io5';
 import { LuChevronRight, LuChevronsUpDown } from 'react-icons/lu';
@@ -11,10 +11,13 @@ import Card from '../Components/CardSection/Card';
 import Pagination from '../Components/Pagination/Pagination';
 import Subscribe from '../Components/SubScribe/Subscribe';
 import { LiaThListSolid, LiaThSolid } from "react-icons/lia";
+import { SlArrowDown } from "react-icons/sl";
+import { IoIosArrowUp } from "react-icons/io";
 
 const TourLists = () => {
 
     const [activeTab, setActiveTab] = useState("Hotel");
+    const [value, setValue] = useState(30);
 
     const tabs = [
         { name: "Hotel", icon: <FaHotel /> },
@@ -23,6 +26,14 @@ const TourLists = () => {
         { name: "Cruise", icon: <FaShip /> },
         { name: "Family Trip", icon: <FaUsers /> },
     ];
+
+
+    const min = 30;
+    const max = 350;
+
+    const handleChange = (e) => {
+        setValue(Number(e.target.value));
+    };
 
     return (
         <div className='text-[#F5F5F5]'>
@@ -138,21 +149,120 @@ const TourLists = () => {
                         <p className='text-sm text-[#008DD0]'>Clear filter</p>
                     </div>
                     <div className='flex items-center gap-6'>
-                        <div className='flex items-center gap-2'><span className='text-base font-bold'>Sort by</span><LuChevronsUpDown className='text-2xl'/></div>
-                        <div className='flex items-center gap-2'><LiaThListSolid className='text-3xl'/><LiaThSolid className='text-3xl'/></div>
+                        <div className='flex items-center gap-2'><span className='text-base font-bold'>Sort by</span><LuChevronsUpDown className='text-2xl' /></div>
+                        <div className='flex items-center gap-2'><LiaThListSolid className='text-3xl' /><LiaThSolid className='text-3xl' /></div>
                     </div>
                 </div>
 
-                {/* cards  */}
-                <div className='max-w-7xl mx-auto'>
-                    {/* card section  */}
-                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((card, index) => (
-                            <div key={index}>
-                                <Card />
+                {/* main contant  */}
+                <div className='max-w-7xl mx-auto flex gap-12'>
+
+                    <div className='w-[60%] p-4 border-2 rounded-xl border-[#E6E6E6]'>
+                        {/* search tour  */}
+                        <div>
+
+                            <h1 className='text-xl font-bold border-b-2 pb-2 border-[#E6E6E6]'>Search Tours</h1>
+                            <div className='border-b-2 border-[#E6E6E6]'>
+                                <h1 className='flex items-center justify-between py-5'><span className='text-base font-bold'>Landscape View</span><SlArrowDown /></h1>
+                                <h1 className='flex items-center justify-between py-5'><span className='text-base font-bold'>Traveler Type</span><SlArrowDown /></h1>
+                                <h1 className='flex items-center justify-between py-5'><span className='text-base font-bold'>Special Offers</span><SlArrowDown /></h1>
+                                <h1 className='flex items-center justify-between py-5'><span className='text-base font-bold'>Acommondation</span><SlArrowDown /></h1>
                             </div>
-                        ))}
+
+                            {/* filter price  */}
+                            <div className='border-b-2 border-[#E6E6E6] pb-5'>
+                                <h1 className='flex items-center justify-between py-5'><span className='text-base font-bold'>Filter Price</span><IoIosArrowUp className='text-2xl' /></h1>
+
+                                {/* Slider input */}
+                                <input
+                                    type="range"
+                                    min={min}
+                                    max={max}
+                                    value={value}
+                                    onChange={handleChange}
+                                    className="w-full h-2 bg-primary-color rounded-lg appearance-none cursor-pointer"
+                                />
+                                {/* Price labels */}
+                                <div className="flex justify-between">
+                                    <div className="px-3 py-1 bg-primary-color text-white rounded-md text-sm font-medium">
+                                        $ {min}.0
+                                    </div>
+                                    <div className="px-3 py-1 bg-primary-color text-white rounded-md text-sm font-medium">
+                                        $ {value}.0
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* hotel review  */}
+                            <div>
+                                <h1 className='flex items-center justify-between py-5'><span className='text-base font-bold'>Hotel Review</span><SlArrowDown /></h1>
+                                <div className="flex flex-col space-y-4 pb-5 border-b-2 border-[#E6E6E6]">
+                                    {/* 5 Stars */}
+                                    <div className="flex items-center">
+                                        <input type="checkbox" className="w-5 h-5 border border-gray-300 mr-2" />
+                                        <div className="flex">
+                                            {[...Array(5)].map((_, i) => (
+                                                <FaStar key={i} className={'w-6 h-6 text-yellow-400'}/>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    {/* 4 Stars */}
+                                    <div className="flex items-center">
+                                        <input type="checkbox" className="w-5 h-5 border border-gray-300 mr-2" />
+                                        <div className="flex">
+                                            {[...Array(4)].map((_, i) => (
+                                                <FaStar key={i} className={'w-6 h-6 text-yellow-400'}/>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    {/* 3 Stars */}
+                                    <div className="flex items-center">
+                                        <input type="checkbox" className="w-5 h-5 border border-gray-300 mr-2" />
+                                        <div className="flex">
+                                            {[...Array(3)].map((_, i) => (
+                                                <FaStar key={i} className={'w-6 h-6 text-yellow-400'}/>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    {/* 2 Stars */}
+                                    <div className="flex items-center">
+                                        <input type="checkbox" className="w-5 h-5 border border-gray-300 mr-2" />
+                                        <div className="flex">
+                                            {[...Array(2)].map((_, i) => (
+                                                <FaStar key={i} className={'w-6 h-6 text-yellow-400'}/>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    {/* 1 Star */}
+                                    <div className="flex items-center">
+                                        <input type="checkbox" className="w-5 h-5 border border-gray-300 mr-2" />
+                                        <div className="flex">
+                                        <FaStar className={'w-6 h-6 text-yellow-400'}/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
                     </div>
+
+                    {/* cards  */}
+                    <div className=''>
+                        {/* card section  */}
+                        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+                            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((card, index) => (
+                                <div key={index}>
+                                    <Card />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
                 </div>
 
                 {/* Pagination  */}

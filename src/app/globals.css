@@ -14,6 +14,9 @@
     font-weight: 600;
     border-radius: 0.5rem;
 }
+.bg-primary-color{
+    background-color: var(--color-primary);
+}
 
 body {
     color: var(--all-text-color);
