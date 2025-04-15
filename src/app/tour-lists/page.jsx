@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react';
 import { CiCalendarDate, CiSearch } from 'react-icons/ci';
-import { FaHotel, FaPlane, FaSearchPlus, FaShip, FaStar, FaUser, FaUsers } from 'react-icons/fa';
+import { FaCaretDown, FaHotel, FaPlane, FaSearchPlus, FaShip, FaStar, FaUser, FaUsers } from 'react-icons/fa';
 import { GiPrayer } from 'react-icons/gi';
-import { IoClose, IoLocationSharp } from 'react-icons/io5';
+import { IoClose, IoFilter, IoLocationSharp } from 'react-icons/io5';
 import { LuChevronRight, LuChevronsUpDown } from 'react-icons/lu';
 import { MdMeetingRoom } from 'react-icons/md';
 import Card from '../Components/CardSection/Card';
@@ -144,7 +144,7 @@ const TourLists = () => {
             <div className='pt-44 bg-[#F5F5F5] text-[#2D3E50] px-3 lg:px-0'>
 
                 {/* sort  header  */}
-                <div className='max-w-7xl mx-auto mb-20 flex flex-col lg:flex-row items-start lg:items-center justify-between pb-2 border-b-2 border-[#E6E6E6]'>
+                <div className='max-w-7xl mx-auto mb-20 lg:flex flex-col lg:flex-row items-start lg:items-center justify-between pb-2 border-b-2 border-[#E6E6E6] hidden'>
                     <div className='flex flex-col lg:flex-row items-start lg:items-center gap-2'>
                         <h5 className='text-[32px] font-bold'>10 Tours found</h5>
                         <p className='text-sm text-[#008DD0]'>Clear filter</p>
@@ -160,112 +160,26 @@ const TourLists = () => {
                         <div className='flex items-center gap-2'><LiaThListSolid className='text-3xl' /><LiaThSolid className='text-3xl' /></div>
                     </div>
                 </div>
+                {/* for mobile version  */}
+                <div className='max-w-7xl mx-auto mb-20 '>
+                    <h1 className='text-[45px] font-semibold pb-[38px]'>Activities of Makkah</h1>
+                    <p>An enim nullam tempor sapien gravida donec enim ipsum</p>
+                    <div className='grid grid-cols-3 gap-3 mt-[38px]'>
+                        {['Category', 'Availability', 'Duration', 'Category'].map((item, index) => (
+                            <div key={index} className='flex items-center justify-between bg-[#D8CBCB] p-3 rounded-full'>
+                                <span className='text-[10px] font-semibold'>{item}</span>
+                                <FaCaretDown />
+                            </div>
+                        ))}
+                    </div>
+                    <div className='text-[#807676] flex flex-col gap-3 mt-[38px]'>
+                        <div className='bg-[#D8CBCB] p-3 rounded-full'>60 Recommendations</div>
+                        <div className='flex items-center justify-between bg-[#D8CBCB] p-3 rounded-full'><span>Recently Selected</span><IoFilter /></div>
+                    </div>
+                </div>
 
                 {/* main contant  */}
                 <div className='max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 pb-20'>
-
-                    {/* modal  */}
-                    {IsOpen && (
-                        <div className="fixed inset-0 backdrop-blur-sm bg-opacity-50 z-50 flex justify-center items-start pt-10">
-                            <div className="w-[90%] max-h-[90vh] overflow-y-auto bg-white rounded-xl p-4 relative">
-                                {/* Close Button */}
-                                <button
-                                    onClick={() => setIsOpen(false)}
-                                    className="absolute top-3 right-3 text-3xl text-gray-600"
-                                >
-                                    <IoClose />
-                                </button>
-
-                                {/* Sidebar Content */}
-                                <h1 className='text-xl font-bold border-b-2 pb-2 border-[#E6E6E6]'>Search Tours</h1>
-
-                                <div className='border-b-2 border-[#E6E6E6]'>
-                                    {/* Dropdown items */}
-                                    {["Landscape View", "Traveler Type", "Special Offers", "Acommondation"].map((item, idx) => (
-                                        <h1 key={idx} className='flex items-center justify-between py-5'>
-                                            <span className='text-base font-bold'>{item}</span>
-                                            <SlArrowDown />
-                                        </h1>
-                                    ))}
-                                </div>
-
-                                {/* Price Filter */}
-                                <div className='border-b-2 border-[#E6E6E6] pb-5'>
-                                    <h1 className='flex items-center justify-between py-5'>
-                                        <span className='text-base font-bold'>Filter Price</span>
-                                        <IoIosArrowUp className='text-2xl' />
-                                    </h1>
-                                    <input
-                                        type="range"
-                                        min={min}
-                                        max={max}
-                                        value={value}
-                                        onChange={handleChange}
-                                        className="w-full h-2 bg-primary-color rounded-lg appearance-none cursor-pointer"
-                                    />
-                                    <div className="flex justify-between">
-                                        <div className="px-3 py-1 bg-primary-color text-white rounded-md text-sm font-medium">
-                                            $ {min}.0
-                                        </div>
-                                        <div className="px-3 py-1 bg-primary-color text-white rounded-md text-sm font-medium">
-                                            $ {value}.0
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/* Hotel Review */}
-                                <div>
-                                    <h1 className='flex items-center justify-between py-5'><span className='text-base font-bold'>Hotel Review</span><SlArrowDown /></h1>
-                                    <div className="flex flex-col space-y-4 pb-5 border-b-2 border-[#E6E6E6]">
-                                        {[5, 4, 3, 2, 1].map(star => (
-                                            <div key={star} className="flex items-center">
-                                                <input type="checkbox" className="w-5 h-5 border border-gray-300 mr-2" />
-                                                <div className="flex">
-                                                    {[...Array(star)].map((_, i) => (
-                                                        <FaStar key={i} className='w-6 h-6 text-yellow-400' />
-                                                    ))}
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-
-                                {/* Trip Type */}
-                                <div>
-                                    <h1 className='flex items-center justify-between py-5'><span className='text-base font-bold'>Trip Type</span><SlArrowDown /></h1>
-                                    <div className='pb-5 border-b-2 border-[#E6E6E6] flex flex-col space-y-4'>
-                                        {["City trips", "Ecotourism", "Escorted tour", "Group tour", "Hosted tours", "Ligula"].map((type, idx) => (
-                                            <div key={idx} className='flex items-center gap-2'>
-                                                <input type="checkbox" className="w-5 h-5 border border-gray-300" />
-                                                <span className='text-base'>{type}</span>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-
-                                {/* Flight Options */}
-                                <div>
-                                    <h1 className='flex items-center justify-between py-5'><span className='text-base font-bold'>Flight Options</span><SlArrowDown /></h1>
-                                    <div className='pb-5 border-b-2 border-[#E6E6E6] flex flex-col space-y-4'>
-                                        {["Direct Flights", "Economy", "Business Class"].map((option, idx) => (
-                                            <div key={idx} className='flex items-center gap-2'>
-                                                <input type="checkbox" className="w-5 h-5 border border-gray-300" />
-                                                <span className='text-base'>{option}</span>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-
-                                {/* Search Button */}
-                                <div className='w-full pt-5'>
-                                    <button className="bg-[#A51CBA] flex items-center justify-center gap-1 text-white py-3 rounded-md font-semibold w-full">
-                                        <CiSearch className='text-2xl' />
-                                        <span>Search</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    )}
 
                     {/* sidebar content  */}
                     <div className='w-full lg:w-[60%] h-auto p-4 self-start border-2 rounded-xl border-[#E6E6E6] hidden lg:block'>
