@@ -155,9 +155,9 @@ const TourLists = () => {
                 </div>
 
                 {/* main contant  */}
-                <div className='max-w-7xl mx-auto flex gap-12'>
+                <div className='max-w-7xl mx-auto flex gap-12 pb-20'>
 
-                    <div className='w-[60%] p-4 border-2 rounded-xl border-[#E6E6E6]'>
+                    <div className='w-[60%] overflow-hidden p-4 border-2 rounded-xl border-[#E6E6E6]'>
                         {/* search tour  */}
                         <div>
 
@@ -202,7 +202,7 @@ const TourLists = () => {
                                         <input type="checkbox" className="w-5 h-5 border border-gray-300 mr-2" />
                                         <div className="flex">
                                             {[...Array(5)].map((_, i) => (
-                                                <FaStar key={i} className={'w-6 h-6 text-yellow-400'}/>
+                                                <FaStar key={i} className={'w-6 h-6 text-yellow-400'} />
                                             ))}
                                         </div>
                                     </div>
@@ -212,7 +212,7 @@ const TourLists = () => {
                                         <input type="checkbox" className="w-5 h-5 border border-gray-300 mr-2" />
                                         <div className="flex">
                                             {[...Array(4)].map((_, i) => (
-                                                <FaStar key={i} className={'w-6 h-6 text-yellow-400'}/>
+                                                <FaStar key={i} className={'w-6 h-6 text-yellow-400'} />
                                             ))}
                                         </div>
                                     </div>
@@ -222,7 +222,7 @@ const TourLists = () => {
                                         <input type="checkbox" className="w-5 h-5 border border-gray-300 mr-2" />
                                         <div className="flex">
                                             {[...Array(3)].map((_, i) => (
-                                                <FaStar key={i} className={'w-6 h-6 text-yellow-400'}/>
+                                                <FaStar key={i} className={'w-6 h-6 text-yellow-400'} />
                                             ))}
                                         </div>
                                     </div>
@@ -232,7 +232,7 @@ const TourLists = () => {
                                         <input type="checkbox" className="w-5 h-5 border border-gray-300 mr-2" />
                                         <div className="flex">
                                             {[...Array(2)].map((_, i) => (
-                                                <FaStar key={i} className={'w-6 h-6 text-yellow-400'}/>
+                                                <FaStar key={i} className={'w-6 h-6 text-yellow-400'} />
                                             ))}
                                         </div>
                                     </div>
@@ -241,10 +241,45 @@ const TourLists = () => {
                                     <div className="flex items-center">
                                         <input type="checkbox" className="w-5 h-5 border border-gray-300 mr-2" />
                                         <div className="flex">
-                                        <FaStar className={'w-6 h-6 text-yellow-400'}/>
+                                            <FaStar className={'w-6 h-6 text-yellow-400'} />
                                         </div>
                                     </div>
                                 </div>
+
+                                {/* Trip Type */}
+                                <div>
+                                    <h1 className='flex items-center justify-between py-5'><span className='text-base font-bold'>Trip Type</span><SlArrowDown /></h1>
+
+                                    <div className='pb-5 border-b-2 border-[#E6E6E6] flex flex-col space-y-4'>
+                                        <div className='flex items-center gap-2'><input type="checkbox" name="" id="" className="w-5 h-5 border border-gray-300" /><span className='text-base'>City trips</span></div>
+                                        <div className='flex items-center gap-2'><input type="checkbox" name="" id="" className="w-5 h-5 border border-gray-300" /><span className='text-base'>Ecotourism</span></div>
+                                        <div className='flex items-center gap-2'><input type="checkbox" name="" id="" className="w-5 h-5 border border-gray-300" /><span className='text-base'>Escorted tour</span></div>
+                                        <div className='flex items-center gap-2'><input type="checkbox" name="" id="" className="w-5 h-5 border border-gray-300" /><span className='text-base'>Group tour</span></div>
+                                        <div className='flex items-center gap-2'><input type="checkbox" name="" id="" className="w-5 h-5 border border-gray-300" /><span className='text-base'>Hosted tours</span></div>
+                                        <div className='flex items-center gap-2'><input type="checkbox" name="" id="" className="w-5 h-5 border border-gray-300" /><span className='text-base'>Ligula</span></div>
+                                    </div>
+
+                                </div>
+
+                                {/* Flight Options */}
+                                <div>
+                                    <h1 className='flex items-center justify-between py-5'><span className='text-base font-bold'>Flight Options</span><SlArrowDown /></h1>
+
+                                    <div className='pb-5 border-b-2 border-[#E6E6E6] flex flex-col space-y-4'>
+                                        <div className='flex items-center gap-2'><input type="checkbox" name="" id="" className="w-5 h-5 border border-gray-300" /><span className='text-base'>Direct Flights</span></div>
+
+                                        <div className='flex items-center gap-2'><input type="checkbox" name="" id="" className="w-5 h-5 border border-gray-300" /><span className='text-base'>Economy</span></div>
+                                        <div className='flex items-center gap-2'><input type="checkbox" name="" id="" className="w-5 h-5 border border-gray-300" /><span className='text-base'>Business Class</span></div>
+                                    </div>
+                                </div>
+                                {/* search btn  */}
+                                <div className='w-[100%] pt-5'>
+                                    <button className="bg-[#A51CBA] flex items-center justify-center gap-1 text-[#FFFFFF] py-3 rounded-md font-semibold w-full">
+                                        <CiSearch className='text-2xl' />
+                                        <span>Search</span>
+                                    </button>
+                                </div>
+
                             </div>
 
                         </div>
@@ -255,20 +290,21 @@ const TourLists = () => {
                     <div className=''>
                         {/* card section  */}
                         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-                            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((card, index) => (
+                            {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((card, index) => (
                                 <div key={index}>
                                     <Card />
                                 </div>
                             ))}
                         </div>
+                        {/* Pagination  */}
+                        <div className='py-10'>
+                            <Pagination />
+                        </div>
                     </div>
 
                 </div>
 
-                {/* Pagination  */}
-                <div className='py-10'>
-                    <Pagination />
-                </div>
+
 
             </div>
             {/* subscribe  */}
