@@ -159,8 +159,14 @@ const DetailsHero = () => {
 
                     {/* tabs  */}
                     <div className='flex items-center justify-between border-b-2 border-[#E6E6E6]'>
-                        <button onClick={() => setBookingFourm(true)} className='py-4 px-7 cursor-pointer'>Booking Forum</button>
-                        <button onClick={() => setEnquiryForum(true)} className='py-4 px-7 cursor-pointer'>Enquiry Forum</button>
+                        <button onClick={() => {
+                            setEnquiryForum(false);
+                            setBookingFourm(true);
+                        }} className={`py-4 px-7 cursor-pointer ${bookingFourm ? 'border-b-2 border-[#00BB98] text-[#00BB98] font-semibold' : ''}`}>Booking Forum</button>
+                        <button onClick={() => {
+                            setBookingFourm(false);
+                            setEnquiryForum(true);
+                        }} className={`py-4 px-7 cursor-pointer ${enquiryForum ? 'border-b-2 border-[#00BB98] text-[#00BB98] font-semibold' : ''}`}>Enquiry Forum</button>
                     </div>
 
                     {/* conditional */}
@@ -192,6 +198,12 @@ const DetailsHero = () => {
                             {/* btn  */}
                             <button className='btn-primary !py-5'>Book Now</button>
 
+                        </div>
+                    }
+                    {
+                        enquiryForum && 
+                        <div>
+                            <h1 className='text-2xl font-bold text-center pt-8'>Comming Soon..</h1>
                         </div>
                     }
 
