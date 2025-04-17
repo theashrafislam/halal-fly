@@ -7,7 +7,7 @@ const CardDetailsPage = ({ params }) => {
     return (
         <div className='max-w-7xl mx-auto'>
             {/* route section  */}
-            <div className='py-[27px] '>
+            <div className='py-[27px] flex items-center justify-center lg:justify-start'>
                 <h5 className='flex items-center gap-3 text-base'><span>Home</span><LiaAngleRightSolid /><span>Tour</span><LiaAngleRightSolid /><span>Tour Package</span></h5>
             </div>
         </div>
