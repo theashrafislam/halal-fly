@@ -5,11 +5,6 @@ import { CiLocationOn } from 'react-icons/ci';
 import { LuEye } from 'react-icons/lu';
 import { TiStarFullOutline } from "react-icons/ti";
 import ImageCarousel from './ImageCarousel';
-import TourMap from './TourMap';
-import TourPlan from './TourPlan';
-import IncludExclud from './IncludExclud';
-import MedinaHighLight from './MedinaHighLight';
-import MakkahHighLight from './MakkahHighLight';
 import OverView from './OverView';
 import FlightIcon from './FlightIcon';
 import KeyInfo from './KeyInfo';
@@ -155,22 +150,6 @@ const DetailsHero = () => {
                 <div className='w-2/3 pr-10'>
                     {/* Overview */}
                     <OverView />
-
-                    {/* Makkah Highlights */}
-                    <MakkahHighLight />
-
-
-                    {/* Medinah Highlights */}
-                    <MedinaHighLight />
-
-                    {/* Included/Excluded */}
-                    <IncludExclud />
-
-                    {/* Tour Plan */}
-                    <TourPlan />
-
-                    {/* Tour Map */}
-                    <TourMap />
 
                 </div>
             </div>

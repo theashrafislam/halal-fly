@@ -1,10 +1,15 @@
 import DetailsHero from '@/app/Components/CardDetails/DetailsHero';
+import IncludExclud from '@/app/Components/CardDetails/IncludExclud';
+import MakkahHighLight from '@/app/Components/CardDetails/MakkahHighLight';
+import MedinaHighLight from '@/app/Components/CardDetails/MedinaHighLight';
+import TourMap from '@/app/Components/CardDetails/TourMap';
+import TourPlan from '@/app/Components/CardDetails/TourPlan';
 import React from 'react';
 import { LiaAngleRightSolid } from 'react-icons/lia';
 
 const CardDetailsPage = ({ params }) => {
     const { id } = params;
-    // console.log(id);
+
     return (
         <div className=''>
             {/* route section  */}
@@ -13,6 +18,25 @@ const CardDetailsPage = ({ params }) => {
             </div>
             {/* hero section  */}
             <DetailsHero />
+
+            <div className='max-w-7xl mx-auto'>
+                <div className='w-2/3 pr-10'>
+                    {/* Makkah Highlights */}
+                    <MakkahHighLight />
+
+                    {/* Medinah Highlights */}
+                    <MedinaHighLight />
+
+                    {/* Included/Excluded */}
+                    <IncludExclud />
+
+                    {/* Tour Plan */}
+                    <TourPlan />
+
+                    {/* Tour Map */}
+                    <TourMap />
+                </div>
+            </div>
         </div>
     );
 };
