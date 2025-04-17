@@ -130,7 +130,7 @@ const DetailsHero = () => {
                     </div>
 
                     {/* Booking  */}
-                    <div className='w-1/3 bg-white p-7 rounded-xl absolute top-0 right-0'>
+                    <div className='w-1/3 bg-white p-7 rounded-xl absolute top-0 right-0 shadow-xl'>
                         <p className='flex items-center gap-2 pb-2'>
                             <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_104_6317)">
@@ -249,6 +249,34 @@ const DetailsHero = () => {
                             <p className='text-base text-[#444]'><span className='font-semibold'>Jabal al-Thawr:</span> Site where Prophet Muhammad ﷺ hid during Hijrah.</p>
                         </div>
                     </div>
+
+
+                    {/* Medinah Highlights */}
+                    <div className='mt-7 flex flex-col gap-3'>
+                        <h6 className='text-2xl font-bold'>Medinah Highlights</h6>
+                        <div className='flex items-center gap-2'>
+                            <div className='w-3 h-3 rounded-full bg-[#B82525]'></div>
+                            <p className='text-base text-[#444]'><span className='font-semibold'>Masjid al-Nabawi:</span> Praying in the Prophet’s Mosque.</p>
+                        </div>
+                        <div className='flex items-center gap-2'>
+                            <div className='w-3 h-3 rounded-full bg-[#B82525]'></div>
+                            <p className='text-base text-[#444]'><span className='font-semibold'>Rawdah:</span> Area between Prophet’s tomb and pulpit, considered part of Paradise.</p>
+                        </div>
+                        <div className='flex items-center gap-2'>
+                            <div className='w-3 h-3 rounded-full bg-[#B82525]'></div>
+                            <p className='text-base text-[#444]'><span className='font-semibold'>Zamzam Well:</span> Drinking and collecting blessed water.</p>
+                        </div>
+                        <div className='flex items-center gap-2'>
+                            <div className='w-3 h-3 rounded-full bg-[#B82525]'></div>
+                            <p className='text-base text-[#444]'><span className='font-semibold'>Quba Mosque :</span> First mosque built in Islam.</p>
+                        </div>
+                        <div className='flex items-center gap-2'>
+                            <div className='w-3 h-3 rounded-full bg-[#B82525]'></div>
+                            <p className='text-base text-[#444]'><span className='font-semibold'>Jabal al-Thawr:</span> Site of the famous Battle of Uhud.</p>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
 
