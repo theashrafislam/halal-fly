@@ -1,12 +1,18 @@
-import React from 'react';
+"use client"
+
+import React, { useState } from 'react';
 import { CiLocationOn } from 'react-icons/ci';
 import { LuEye } from 'react-icons/lu';
 import { TiStarFullOutline } from "react-icons/ti";
-import { BsCameraVideoFill } from "react-icons/bs";
 import ImageCarousel from './ImageCarousel';
 
 
 const DetailsHero = () => {
+
+    // tabs state 
+    const [bookingFourm, setBookingFourm] = useState(true);
+    const [enquiryForum, setEnquiryForum] = useState(false);
+
     return (
         <div className='bg-[#F2FBFA]'>
 
@@ -47,15 +53,15 @@ const DetailsHero = () => {
             </div>
 
             {/* sliders  */}
-            <div className='pb-4'>
+            <div className='pb-10'>
                 <ImageCarousel />
             </div>
 
             {/* key info and booking  */}
-            <div className='max-w-7xl mx-auto flex justify-between pb-16'>
+            <div className='max-w-7xl mx-auto flex justify-between pb-16 relative'>
 
                 {/* key info */}
-                <div className='w-2/3 flex items-center gap-20'>
+                <div className='w-2/3 flex items-center gap-20 pt-7'>
                     {/* Duration */}
                     <div className='flex items-center gap-5'>
                         <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -123,8 +129,72 @@ const DetailsHero = () => {
                 </div>
 
                 {/* Booking  */}
-                <div className='w-1/3 bg-white'>
-                    <p>From</p>
+                <div className='w-1/3 bg-white p-7 rounded-xl absolute top-0 right-0'>
+                    <p className='flex items-center gap-2 pb-2'>
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_104_6317)">
+                                <path d="M12.0701 22.4142C10.6601 22.4142 9.24009 21.8742 8.17009 20.8042L3.64009 16.2742C2.54009 15.1742 1.96009 13.6542 2.03009 12.1042L2.27009 7.1042C2.38009 4.7142 4.27009 2.8242 6.67009 2.7042L11.6701 2.4642C13.2201 2.4042 14.7401 2.9742 15.8401 4.0742L20.3701 8.6042C22.5201 10.7542 22.5201 14.2642 20.3701 16.4142L15.9801 20.8042C14.9001 21.8742 13.4901 22.4142 12.0701 22.4142ZM4.70009 15.2042L9.23009 19.7342C9.99009 20.4942 11.0001 20.9142 12.0701 20.9142C13.1401 20.9142 14.1501 20.4942 14.9101 19.7342L19.3001 15.3442C20.0601 14.5842 20.4801 13.5742 20.4801 12.5042C20.4801 11.4342 20.0601 10.4242 19.3001 9.6642L14.7701 5.1342C13.9701 4.3342 12.8601 3.9042 11.7401 3.9642L6.74009 4.2042C5.11009 4.2742 3.84009 5.5442 3.76009 7.1642L3.52009 12.1642C3.47009 13.2942 3.90009 14.4042 4.70009 15.2042Z" fill="#B82525" />
+                                <path d="M9.5 13.1842C7.71 13.1842 6.25 11.7242 6.25 9.9342C6.25 8.1442 7.71 6.6842 9.5 6.6842C11.29 6.6842 12.75 8.1442 12.75 9.9342C12.75 11.7242 11.29 13.1842 9.5 13.1842ZM9.5 8.1842C8.54 8.1842 7.75 8.9742 7.75 9.9342C7.75 10.8942 8.54 11.6842 9.5 11.6842C10.46 11.6842 11.25 10.8942 11.25 9.9342C11.25 8.9742 10.46 8.1842 9.5 8.1842Z" fill="#B82525" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_104_6317">
+                                    <rect width="24" height="24" fill="white" transform="translate(0 0.434204)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <span className='text-base font-bold text-[#444]'>From</span>
+                    </p>
+
+                    <p className='flex items-center gap-3'><span className='text-[32px] font-bold text-[#00BB98]'>$42.00</span><span className='text-[#999]'>$42.00</span></p>
+
+                    {/* svg  */}
+                    <div className='py-7'>
+                        <svg width="356" height="33" viewBox="0 0 356 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M177.031 31.5769L177.811 29.6094C177.913 29.6486 178.023 29.6651 178.137 29.6469C178.525 29.5855 178.796 29.1816 178.741 28.7454C178.709 28.4888 178.57 28.2806 178.383 28.1629L179.174 26.1664C179.275 26.204 179.384 26.2199 179.496 26.2022C179.884 26.1408 180.155 25.737 180.1 25.3007C180.068 25.0459 179.931 24.8394 179.747 24.7211L182.142 18.6736L187.721 18.7123C190.494 18.4984 190.905 16.9467 190.964 16.4217H191C191 16.4217 191.079 14.2142 187.732 13.9816L182.154 14.0623L179.722 8.03134C179.925 7.91075 180.073 7.68153 180.098 7.40509C180.137 6.96654 179.852 6.57521 179.462 6.53141C179.348 6.51833 179.239 6.53994 179.138 6.58374L178.331 4.58441C178.487 4.45529 178.596 4.25791 178.617 4.0247C178.656 3.58616 178.371 3.19482 177.981 3.15103C177.905 3.14249 177.831 3.15103 177.761 3.16866L176.966 1.19833C176.966 1.19833 176.423 -0.604765 175.714 0.603368L177.446 14.1135L168.371 15.4929L166.519 10.4362C166.519 10.4362 165.713 9.83899 166.078 11.6427L166.497 15.5031C166.497 15.5031 164.934 15.2608 165.028 16.3643H165.323L165.326 16.4985L165.004 16.5019C164.916 17.606 166.477 17.3517 166.477 17.3517L166.082 21.2156C165.728 23.0221 166.531 22.4186 166.531 22.4186L168.352 17.3483L177.435 18.6588L175.784 32.1821C176.5 33.3845 177.033 31.5774 177.033 31.5774L177.031 31.5769ZM176.151 16.3927L176.297 16.3893H176.452L176.151 16.3927Z" fill="#B82525" />
+                            <path d="M2.99926 19.5188C4.65612 19.5188 5.99943 17.9431 5.99963 15.9992C5.99984 14.0554 4.65685 12.4796 3 12.4796C1.34315 12.4796 -0.00016474 14.0554 -0.000367956 15.9992C-0.000571172 17.9431 1.34241 19.5188 2.99926 19.5188Z" fill="#B82525" />
+                            <path d="M353 19.5188C354.657 19.5188 356 17.9431 356.001 15.9992C356.001 14.0554 354.658 12.4796 353.001 12.4796C351.344 12.4796 350.001 14.0554 350.001 15.9992C350 17.9431 351.343 19.5188 353 19.5188Z" fill="#B82525" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.5244 15.8322H14V16.9497H17.5244V15.8322ZM333.791 16.9497H326.762V15.8322H333.791V16.9497ZM322.077 16.9497H315.049V15.8322H322.077V16.9497ZM310.364 16.9497H303.335V15.8322H310.364V16.9497ZM298.65 16.9497H291.621V15.8322H298.65V16.9497ZM286.936 16.9497H279.907V15.8322H286.936V16.9497ZM275.222 16.9497H268.195V15.8322H275.222V16.9497ZM263.509 16.9497H256.48V15.8322H263.509V16.9497ZM251.795 16.9497H244.767V15.8322H251.795V16.9497ZM240.081 16.9497H233.053V15.8322H240.081V16.9497ZM228.367 16.9497H221.34V15.8322H228.367V16.9497ZM216.653 16.9497H209.626V15.8322H216.653V16.9497ZM204.94 16.9497H197.912V15.8322H204.94V16.9497ZM193.226 16.9497H186.198V15.8322H193.226V16.9497ZM181.512 16.9497H174.485V15.8322H181.512V16.9497ZM169.798 16.9497H162.771V15.8322H169.798V16.9497ZM158.085 16.9497H151.057V15.8322H158.085V16.9497ZM146.371 16.9497H139.343V15.8322H146.371V16.9497ZM134.657 16.9497H127.628V15.8322H134.657V16.9497ZM122.943 16.9497H115.914V15.8322H122.943V16.9497ZM111.229 16.9497H104.201V15.8322H111.229V16.9497ZM99.5157 16.9497H92.4881V15.8322H99.5157V16.9497ZM87.8019 16.9497H80.7743V15.8322H87.8019V16.9497ZM76.0881 16.9497H69.0606V15.8322H76.0881V16.9497ZM64.3743 16.9497H57.3468V15.8322H64.3743V16.9497ZM52.6606 16.9497H45.633V15.8322H52.6606V16.9497ZM40.9468 16.9497H33.9192V15.8322H40.9468V16.9497ZM29.233 16.9497H22.2055V15.8322H29.233V16.9497ZM338.476 15.8322H342V16.9497H338.476V15.8322Z" fill="#B82525" />
+                        </svg>
+                    </div>
+
+                    {/* tabs  */}
+                    <div className='flex items-center justify-between border-b-2 border-[#E6E6E6]'>
+                        <button onClick={() => setBookingFourm(true)} className='py-4 px-7 cursor-pointer'>Booking Forum</button>
+                        <button onClick={() => setEnquiryForum(true)} className='py-4 px-7 cursor-pointer'>Enquiry Forum</button>
+                    </div>
+
+                    {/* conditional */}
+                    {
+                        bookingFourm &&
+                        <div className='pt-8 flex flex-col gap-6'>
+                            {/* Date check in */}
+                            <div className='flex flex-col gap-1'>
+                                <label htmlFor="date-in" className='text-base'>Date check in</label>
+                                <input type="date" name="" id="date-in" className='py-3 px-4 border-[#E6E6E6] border hover:bg-[#F5F5F5] rounded-lg font-medium' />
+                            </div>
+
+                            {/* Date check out */}
+                            <div className='flex flex-col gap-1'>
+                                <label htmlFor="date-out" className='text-base'>Date check out</label>
+                                <input type="date" name="" id="date-out" className='py-3 px-4 border-[#E6E6E6] border hover:bg-[#F5F5F5] rounded-lg font-medium' />
+                            </div>
+
+                            {/* Total Night: */}
+                            <div className='flex flex-col items-start gap-6'>
+                                <p className='text-base font-semibold'>Total Night:</p>
+                                <div className='flex items-center gap-2'>
+                                    <div className='w-[60px] py-4 rounded-lg text-center text-2xl font-bold bg-[#F4F4F4]'>1</div>
+                                    <p className='text-base text-[#444]'>Number ticket  × $42.00</p>
+                                </div>
+                                <p className='text-base font-semibold'>Total = $42.00</p>
+                            </div>
+
+                            {/* btn  */}
+                            <button className='btn-primary !py-5'>Book Now</button>
+
+                        </div>
+                    }
+
                 </div>
 
             </div>
