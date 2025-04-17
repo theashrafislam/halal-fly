@@ -53,8 +53,9 @@ const DetailsHero = () => {
 
             {/* key info and booking  */}
             <div className='max-w-7xl mx-auto flex justify-between pb-16'>
+
                 {/* key info */}
-                <div className='w-2/3 flex items-center justify-between'>
+                <div className='w-2/3 flex items-center gap-20'>
                     {/* Duration */}
                     <div className='flex items-center gap-5'>
                         <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -119,12 +120,13 @@ const DetailsHero = () => {
                             <p className='text-sm text-[#444] font-bold'>Airpot</p>
                         </div>
                     </div>
-
-                    {/* Booking  */}
-                    <div>
-
-                    </div>
                 </div>
+
+                {/* Booking  */}
+                <div className='w-1/3 bg-white'>
+                    <p>From</p>
+                </div>
+
             </div>
         </div>
     );
