@@ -44,7 +44,8 @@ const Header = () => {
             {/* mobile nav  */}
             <div className='lg:hidden flex items-center justify-between max-w-7xl mx-auto px-4 text-[#2D3E50] py-4 lg:mx-0'>
                 {/* Logo */}
-                <div className='text-xl font-bold lg:hidden'>Logo</div>
+                {/* <div className='text-xl font-bold lg:hidden'>Logo</div> */}
+                <Image src={'/logo.png'} alt='logo' width={500} height={500} className='w-12'/>
 
                 {/* Mobile Hamburger */}
                 <div className='lg:hidden'>
