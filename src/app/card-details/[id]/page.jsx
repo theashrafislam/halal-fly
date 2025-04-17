@@ -1,11 +1,15 @@
 import React from 'react';
+import { LiaAngleRightSolid } from 'react-icons/lia';
 
 const CardDetailsPage = ({ params }) => {
     const { id } = params;
     // console.log(id);
     return (
-        <div>
-            <h1>Hello I am Card Details Page. {id}</h1>
+        <div className='max-w-7xl mx-auto'>
+            {/* route section  */}
+            <div className='py-[27px] '>
+                <h5 className='flex items-center gap-3 text-base'><span>Home</span><LiaAngleRightSolid /><span>Tour</span><LiaAngleRightSolid /><span>Tour Package</span></h5>
+            </div>
         </div>
     );
 };
