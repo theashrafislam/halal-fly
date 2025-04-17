@@ -6,6 +6,7 @@ import { LuEye } from 'react-icons/lu';
 import { TiStarFullOutline } from "react-icons/ti";
 import ImageCarousel from './ImageCarousel';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import Image from 'next/image';
 
 
 const DetailsHero = () => {
@@ -359,6 +360,12 @@ const DetailsHero = () => {
                                 </div>
                             ))}
                         </div>
+                    </div>
+
+                    {/* Tour Map */}
+                    <div className='py-[80px] border-b-2 border-[#E6E6E6]'>
+                        <h6 className='text-[42px] font-bold pb-5'>Tour Map</h6>
+                        <Image src={'/map.jpg'} width={1000} height={700} alt='map'/>
                     </div>
 
                 </div>
