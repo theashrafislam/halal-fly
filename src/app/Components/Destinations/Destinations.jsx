@@ -3,7 +3,7 @@ import React from 'react';
 
 const Destinations = () => {
     return (
-        <div className='pt-[120px] md:pt-[163px] pb-[120px] min-h-screen bg-[#1A5F7A] text-[#F5F5F5]'>
+        <div className='pt-[120px] md:pt-[163px] pb-[120px] min-h-screen bg-[#C03DB3] text-[#F5F5F5]'>
 
             <div className='max-w-7xl mx-auto'>
                 <div className='pb-[57px] text-center  mx-3 lg:mx-0'>
@@ -18,7 +18,7 @@ const Destinations = () => {
                         <Image width={8000} height={5000} alt='hello' className='w-full h-full rounded-xl object-cover' src={'/hero-section.jpg'} />
                         <div className='absolute bottom-5 left-5'>
                             <h3 className='text-5xl font-bold'>Europe</h3>
-                            <p className='text-base font-normal pt-3'>07 Tours</p>
+                            <p className='text-base font-normal mt-3 px-2 py-2 w-24 text-center bg-[#AF52DE] rounded-lg'>07 Tours</p>
                         </div>
                     </div>
                     {/* right  */}
@@ -27,7 +27,7 @@ const Destinations = () => {
                             <Image width={800} height={400} className='h-[308px] rounded-xl' alt='hello' src={'/hero-section.jpg'} />
                             <div className='absolute bottom-5 left-5'>
                                 <h3 className='text-4xl font-bold'>Africa Wilds</h3>
-                                <p className='text-base font-normal pt-3'>142 Tours</p>
+                                <p className='text-base font-normal mt-3 px-2 py-2 w-24 text-center bg-[#AF52DE] rounded-lg'>142 Tours</p>
                             </div>
                         </div>
                         <div className='flex flex-col lg:flex-row items-center justify-between gap-[24px]'>
@@ -35,14 +35,14 @@ const Destinations = () => {
                                 <Image width={800} height={400} alt='hello' className='rounded-xl' src={'/hero-section.jpg'} />
                                 <div className='absolute bottom-5 left-5'>
                                     <h3 className='text-2xl font-bold'>Saudi Arabia</h3>
-                                    <p className='text-base font-normal pt-3'>15 Tours</p>
+                                    <p className='text-base font-normal mt-3 px-2 py-2 w-24 text-center bg-[#AF52DE] rounded-lg'>15 Tours</p>
                                 </div>
                             </div>
                             <div className='relative hidden lg:block'>
                                 <Image width={800} height={500} alt='hello' className='rounded-xl' src={'/hero-section.jpg'} />
                                 <div className='absolute bottom-5 left-5'>
                                     <h3 className='text-2xl font-bold'>South America</h3>
-                                    <p className='text-base font-normal pt-3'>05 Tours</p>
+                                    <p className='text-base font-normal mt-3 px-2 py-2 w-24 text-center bg-[#AF52DE] rounded-lg'>05 Tours</p>
                                 </div>
                             </div>
                         </div>

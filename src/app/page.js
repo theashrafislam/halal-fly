@@ -8,6 +8,7 @@ import Video from "./Components/Video/Video";
 import Total from "./Components/Total/Total";
 import Blog from "./Components/Blog/Blog";
 import Subscribe from "./Components/SubScribe/Subscribe";
+import AllTotal from "./Components/Total/AllTotal";
 
 export default function Home() {
   return (
@@ -21,17 +22,20 @@ export default function Home() {
       {/* FindTraval */}
       <FindTraval />
 
+      {/* All total  */}
+      {/* <AllTotal /> */}
+
       {/* Destinations */}
       <Destinations />
 
       {/* review  */}
       <Review />
 
-      {/* video  */}
-      <Video />
-
       {/* total  */}
       <Total />
+
+      {/* video  */}
+      <Video />
 
       {/* Blogs  */}
       <Blog />

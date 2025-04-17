@@ -2,7 +2,7 @@ import React from 'react';
 
 const Total = () => {
     return (
-        <div className='bg-[#1A5F7A] text-[#F5F5F5]'>
+        <div className='bg-[#C03DB3] text-[#F5F5F5]'>
             <div className='max-w-7xl mx-auto py-[70px] '>
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mx-3 lg:mx-0'>
                     {/* card  */}

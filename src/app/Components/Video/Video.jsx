@@ -7,7 +7,7 @@ const Video = () => {
                 autoPlay
                 loop
                 muted
-                className="w-full h-auto"
+                className="w-full h-[690px] object-cover"
                 src="/hello.mp4"
                 type="video/mp4"
             />

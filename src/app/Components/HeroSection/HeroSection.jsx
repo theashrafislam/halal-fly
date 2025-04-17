@@ -2,9 +2,11 @@
 
 import React, { useState } from 'react';
 import { CiCalendarDate, CiSearch } from 'react-icons/ci';
-import { FaHotel, FaPlane, FaShip, FaUser, FaUsers } from 'react-icons/fa';
+import { FaHotel, FaSearchPlus, FaShip, FaUser, FaUsers } from 'react-icons/fa';
 import { GiPrayer } from "react-icons/gi";
+import { IoIosArrowUp } from 'react-icons/io';
 import { IoLocationSharp } from "react-icons/io5";
+import { LuPlane } from 'react-icons/lu';
 import { MdMeetingRoom } from "react-icons/md";
 
 const HeroSection = () => {
@@ -13,13 +15,13 @@ const HeroSection = () => {
     const tabs = [
         { name: "Hotel", icon: <FaHotel /> },
         { name: "Umrah", icon: <GiPrayer /> },
-        { name: "Flight", icon: <FaPlane /> },
+        { name: "Flight", icon: <LuPlane /> },
         { name: "Cruise", icon: <FaShip /> },
         { name: "Family Trip", icon: <FaUsers /> },
     ];
 
     return (
-        <div className="relative lg:min-h-[700px] w-full text-[#F5F5F5] bg-cover bg-no-repeat bg-center min-h-[100dvh] bg-[url('/hero-section.jpg')]">
+        <div className="relative lg:min-h-[800px] w-full text-[#F5F5F5] bg-cover bg-no-repeat bg-center min-h-[100dvh] bg-[url('/hero.png')]">
 
             {/* Overlay */}
             <div className="absolute inset-0 bg-black/30"></div>
@@ -120,6 +122,14 @@ const HeroSection = () => {
                         </div>
                     )}
                 </div>
+            </div>
+            {/* Advanced Search Button */}
+            <div className='absolute bottom-20 right-1/5 transform -translate-x-1/2 z-20'>
+                <button className='flex items-center gap-2 text-white'>
+                    <FaSearchPlus className='text-xl'/>
+                    <span className='text-base font-medium'>Advanced Search</span>
+                    <IoIosArrowUp className='text-xl'/>
+                </button>
             </div>
         </div>
     );

@@ -1,5 +1,6 @@
 "use client"
 
+import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 
@@ -16,9 +17,10 @@ const Header = () => {
 
     return (
         <nav className='bg-[#F5F5F5] shadow-md'>
-            <div className='hidden max-w-7xl mx-auto lg:flex items-center justify-between py-4'>
+            <div className='hidden max-w-7xl mx-auto lg:flex items-center justify-between py-2'>
                 {/* Logo */}
-                <div className='text-xl font-bold'>Logo</div>
+                {/* <div className='text-xl font-bold'>Logo</div> */}
+                <Image src={'/logo.png'} alt='logo' width={1000} height={1000} className='w-20'/>
 
                 {/* Desktop Menu */}
                 <ul className='flex items-center gap-[46px]'>
