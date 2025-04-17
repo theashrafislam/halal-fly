@@ -124,7 +124,7 @@ const HeroSection = () => {
                 </div>
             </div>
             {/* Advanced Search Button */}
-            <div className='absolute bottom-20 right-1/5 transform -translate-x-1/2 z-20'>
+            <div className='absolute bottom-20 right-1/5 transform -translate-x-1/2 z-20 hidden lg:block'>
                 <button className='flex items-center gap-2 text-white'>
                     <FaSearchPlus className='text-xl'/>
                     <span className='text-base font-medium'>Advanced Search</span>
