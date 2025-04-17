@@ -161,7 +161,7 @@ const TourLists = () => {
                     </div>
                 </div>
                 {/* for mobile version  */}
-                <div className='max-w-7xl mx-auto mb-20 '>
+                <div className='max-w-7xl mx-auto mb-20 lg:hidden'>
                     <h1 className='text-[45px] font-semibold pb-[38px]'>Activities of Makkah</h1>
                     <p>An enim nullam tempor sapien gravida donec enim ipsum</p>
                     <div className='grid grid-cols-3 gap-3 mt-[38px]'>
